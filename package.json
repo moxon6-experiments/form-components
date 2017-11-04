@@ -1,8 +1,9 @@
 {
   "name": "@moxon6/form-components",
-  "version": "1.0.0",
+  "version": "1.0.1-alpha.3",
   "description": "This is small collection of Material-ui fields components,",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "dependencies": {
     "material-ui": "^0.19.4",
     "moment": "^2.19.1",
@@ -11,9 +12,12 @@
   "peerDependencies": {
     "react": "^16.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nwb": "0.19.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module"
   },
   "repository": {
     "type": "git",
