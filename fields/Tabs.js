@@ -8,20 +8,16 @@ const style = {
 }
 
 export default props => {
-  if (props.never){
-    return null
-  } else if (props.always){
-    return props.children
-  } else {
-    return (
-      <Tabs>
-        <Tab label={props.negative} />
-        <Tab label={props.positive}>
-          <Paper style={style}>
-            {props.children}
-            </Paper>
-        </Tab>
-      </Tabs>
-    )
-  }
+  if (props.never) return null
+  if (props.always) return props.children
+  return (
+    <Tabs>
+      <Tab label={props.negative} />
+      <Tab label={props.positive}>
+        <Paper style={style}>
+          {props.children}
+          </Paper>
+      </Tab>
+    </Tabs>
+  )
 }

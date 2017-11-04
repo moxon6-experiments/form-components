@@ -1,5 +1,4 @@
 import React from "react"
-
 import DatePicker from "material-ui/DatePicker"
 import TimePicker from "material-ui/TimePicker"
 import { fakeEvent, formatDate } from "./utils"

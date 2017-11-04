@@ -18,12 +18,10 @@ const muiTheme = getMuiTheme({
   }
 })
 
-const MForm = props => (
+export default props => (
   <MuiThemeProvider muiTheme={muiTheme}>
     <Paper zDepth={2} style={style}>
       {props.children}
     </Paper>
   </MuiThemeProvider>
 )
-
-export default MForm
