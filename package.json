@@ -1,6 +1,6 @@
 {
   "name": "@moxon6/form-components",
-  "version": "1.0.1-alpha.4",
+  "version": "1.0.1-alpha.6",
   "description": "This is small collection of Material-ui fields components,",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -17,7 +17,8 @@
   },
   "scripts": {
     "build": "nwb build-react-component",
-    "clean": "nwb clean-module"
+    "clean": "nwb clean-module",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",

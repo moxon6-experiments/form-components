@@ -11,7 +11,9 @@ export default ({ key, value, options, onChange, title }) => (
       floatingLabelText={title}
       value={value}
       fullWidth={true}
-      onChange={options.length ? onChange : () => null}
+      onChange={options.length 
+        ? (e, index, response) => onChange(fakeEvent(response))
+        : () => null}
     >
       {options.map((entry, index) => 
         <MenuItem 
