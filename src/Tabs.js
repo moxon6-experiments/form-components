@@ -12,12 +12,12 @@ export default props => {
   if (props.always) return props.children
   return (
     <Tabs>
-      <Tab label={props.negative} />
       <Tab label={props.positive}>
         <Paper style={style}>
           {props.children}
           </Paper>
       </Tab>
+      <Tab label={props.negative} />
     </Tabs>
   )
 }
