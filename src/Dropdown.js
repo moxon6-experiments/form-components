@@ -18,8 +18,8 @@ export default ({ key, value, options, onChange, title }) => (
       {options.map((entry, index) => 
         <MenuItem 
           key={`${key}/${index}`}
-          value={entry}
-          primaryText={entry}
+          value={entry.id}
+          primaryText={entry.text}
         />
       )}
     </SelectField>
