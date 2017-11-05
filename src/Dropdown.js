@@ -3,13 +3,15 @@ import { fakeEvent } from "./utils"
 import SelectField from "material-ui/SelectField"
 import MenuItem from "material-ui/MenuItem"
 
+const onChange = (e, index, response) => onChange(fakeEvent(response))
+
 export default ({ key, value, options, onChange, title }) => (
   <div style={{ paddingLeft: 20 }}>
     <SelectField
       floatingLabelText={title}
       value={value}
       fullWidth={true}
-      onChange={(e, index, response) => onChange(fakeEvent(response))}
+      onChange={options.length ? onChange : () => null}
     >
       {options.map((entry, index) => 
         <MenuItem 
