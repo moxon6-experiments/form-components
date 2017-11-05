@@ -11,7 +11,7 @@ export default props => {
   if (props.never) return null
   if (props.always) return props.children
   return (
-    <Tabs>
+    <Tabs initialSelectedIndex={1}>
       <Tab label={props.positive}>
         <Paper style={style}>
           {props.children}
